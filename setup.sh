@@ -196,7 +196,7 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[ MFI NETWORK ]-===================="
+echo "=====================-[ KANG NYIMAK ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
@@ -236,7 +236,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ Script Created By ADAM SIJA ]-==============="
+echo "===============-[ Script ModBy Tukang Nyimak]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
