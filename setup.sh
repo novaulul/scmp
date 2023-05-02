@@ -121,11 +121,11 @@ echo -e "[ ${green}INFO${NC} ] Aight good ... installation file is ready"
 sleep 2
 echo -ne "[ ${green}INFO${NC} ] Check permission : "
 
-mkdir -p /var/lib/SIJA >/dev/null 2>&1
+mkdir -p /var/lib/premium-script >/dev/null 2>&1
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
 
 echo ""
-wget -q https://raw.githubusercontent.com/bracoli/v4/main/tools.sh;chmod +x tools.sh;./tools.sh
+wget -q https://raw.githubusercontent.com/novaulul/scmp/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
 yellow "Add Domain for vmess/vless/trojan dll"
@@ -196,7 +196,7 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[ OTTIN NETWORK ]-===================="
+echo "=====================-[ MFI NETWORK ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
