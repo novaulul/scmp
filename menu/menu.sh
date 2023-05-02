@@ -71,14 +71,15 @@ echo -e "\e[34m ━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\e[34m Domain               \e[0m:  $domain"	
 echo -e "\e[34m Ip Vps               \e[0m:  $IPVPS"
 echo -e "\e[34m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e " [\e[36mx\e[0m] Download | $dtoday [\e[36mx\e[0m] Upload | $utoday"
+echo -e " [\e[36mx\e[0m] Download | $dtoday    [\e[36mx\e[0m] Upload | $utoday"
 echo -e "\e[34m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "                        • MENU •                 "
+echo -e "                       • MENU •                 "
 echo -e "\e[34m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " [\e[34m•1\e[0m] SSH & OpenVPN Menu  [\e[34m•5\e[0m] SYSTEM Menu"
 echo -e " [\e[34m•2\e[0m] Vmess Menu          [\e[34m•6\e[0m] Status Service"
 echo -e " [\e[34m•3\e[0m] Vless Menu          [\e[34m•7\e[0m] Clear RAM Cache"
-echo -e " [\e[34m•4\e[0m] Trojan Go Menu      [\e[34m•8\e[0m] Trojan GFW Menu"                  
+echo -e " [\e[34m•4\e[0m] Trojan Go Menu      [\e[34m•8\e[0m] Trojan GFW Menu"
+echo -e " [\e[34m•9\e[0m] SSH UDP	      [\e[34m•10\e[0m] Next Menu" 
 echo -e   ""
 echo -e   " Press x or [ Ctrl+C ] • To-Exit-Script"
 echo -e   ""
@@ -94,5 +95,6 @@ case $opt in
 6) clear ; running ;;
 7) clear ; clearcache ;;
 8) clear ; menu-trojan ;;
+8) clear ; menu-udp ;;
 x) exit ;;
 esac
