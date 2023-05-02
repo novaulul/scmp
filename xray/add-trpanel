@@ -1,0 +1,89 @@
+#!/bin/bash
+dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
+biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
+#########################
+
+
+
+source /var/lib/SIJA/ipvps.conf
+if [[ "$IP" = "" ]]; then
+domain=$(cat /etc/xray/domain)
+else
+domain=$IP
+fi
+
+
+#tr="$(cat ~/log-install.txt | grep -w "Trojan WS " | cut -d: -f2|sed 's/ //g')"
+#until [[ ${user_EXISTS} == '0' ]]; do
+#echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+#echo -e "\E[0;41;36m           TROJAN ACCOUNT          \E[0m"
+#echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+
+		#read -rp "User: " -e user
+	
+		user=`cat /tmp/user.txt`
+		user_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
+		if [[ ${user_EXISTS} == '4' ]]; then
+			#read -n 1 -s -r -p "Press any key to back on menu"
+clear
+		echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+		echo -e "\E[0;41;39m           TROJAN ACCOUNT          \E[0m"
+		echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+		echo ""
+		echo "Akun User: ${user} sudah terdaftar"
+		echo "silahkan gunakan nama lain cuyy!!"
+		echo ""
+		echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+		#read -n 1 -s -r -p "Press any key to back on menu"
+		#menu-trojan
+		else
+	
+#uuid=$(cat /proc/sys/kernel/random/uuid)
+#read -p "Expired (days): " masaaktif
+masaaktif=`cat /tmp/expired.txt`
+exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+sed -i '/#trojanws$/a\#### '"$user $exp"'\
+},{"password": "'""$user""'","email": "'""$user""'"' /etc/xray/config.json
+sed -i '/#trojangrpc$/a\#### '"$user $exp"'\
+},{"password": "'""$user""'","email": "'""$user""'"' /etc/xray/config.json
+
+systemctl restart xray
+trojanlink1="trojan://${user}@${domain}:443?mode=gun&security=tls&type=grpc&serviceName=trojan-grpc&sni=bug.com#${user}"
+trojanlink="trojan://${user}@nyimak.xyz:443?path=%2Ftrojango&security=tls&host=${domain}&type=ws&sni=${domain}#${user}"
+clear
+
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" > "/tmp/${user}.txt"
+echo -e "           Trial TROJAN            " >> "/tmp/${user}.txt"
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" >> "/tmp/${user}.txt"
+echo -e "Remarks      : ${user}" >> "/tmp/${user}.txt"
+echo -e "Host/IP      : ${domain}" >> "/tmp/${user}.txt"
+echo -e "port         : 443" >> "/tmp/${user}.txt"
+echo -e "Key          : $user" >> "/tmp/${user}.txt"
+echo -e "Path         : /trojango" >> "/tmp/${user}.txt"
+echo -e "ServiceName  : trojan-grpc" >> "/tmp/${user}.txt"
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" >> "/tmp/${user}.txt"
+echo -e "Link WS      : ${trojanlink}" >> "/tmp/${user}.txt"
+echo -e "Link GRPC    : ${trojanlink1}" >> "/tmp/${user}.txt"
+echo -e "Expired On   : $exp" >> "/tmp/${user}.txt"
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" >> "/tmp/${user}.txt"
+
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[45m          Trial TROJAN           \E[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "Remarks      : ${user}"
+echo -e "Host/IP      : ${domain}"
+echo -e "port         : 443"
+echo -e "Key          : $user"
+echo -e "Path         : /trojango"
+echo -e "ServiceName  : trojan-grpc"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "Link WS      : ${trojanlink}"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "Link GRPC    : ${trojanlink1}"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "Expired On   : $exp"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo ""
+	
+fi
+#menu
