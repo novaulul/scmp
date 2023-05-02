@@ -3,7 +3,7 @@
   "key": "/etc/xray/xray.key",
   "stream_buffer": 33554432,
   "receive_buffer": 83886080,
-  "user": "ftvpn",
+  "user": "kangnyimak",
   "auth": {
     "mode": "passwords",
     "pass": [
