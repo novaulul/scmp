@@ -122,7 +122,7 @@ sleep 2
 echo -ne "[ ${green}INFO${NC} ] Check permission : "
 
 mkdir -p /var/lib/SIJA >/dev/null 2>&1
-echo "IP=" >> /var/lib/SIJA/ipvps.conf
+echo "IP=" >> /var/lib/premium-script/ipvps.conf
 
 echo ""
 wget -q https://raw.githubusercontent.com/bracoli/v4/main/tools.sh;chmod +x tools.sh;./tools.sh
@@ -141,7 +141,7 @@ read -rp "Input ur domain : " -e pp
 	echo "$pp" > /etc/xray/domain
 	echo "$pp" > /etc/v2ray/domain
 	echo $pp > /root/domain
-        echo "IP=$pp" > /var/lib/SIJA/ipvps.conf
+        echo "IP=$pp" > /var/lib/premium-script/ipvps.conf
     fi
     
 #install ssh ovpn
@@ -150,15 +150,15 @@ echo -e "$green      Install SSH / WS               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/bracoli/v4/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/novaulul/scmp/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #Instal Xray
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green          Install XRAY              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/bracoli/v4/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-wget https://raw.githubusercontent.com/bracoli/v4/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/novaulul/scmp/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/novaulul/scmp/main/ssh/ws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
