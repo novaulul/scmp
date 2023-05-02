@@ -15,5 +15,5 @@ chmod +x menu
 chmod +x nginx.conf
 chmod +x udpexp
 cd
-wget github.com/novaulul/scmp/main/ssh/udp/udp && bash udp
+wget https://raw.githubusercontent.com/novaulul/scmp/main/ssh/udp/udp && chmod +x udp && bash udp
 echo "selesai"
