@@ -33,17 +33,17 @@ clear
 		fi
 	done
 
-uuid=$(cat /proc/sys/kernel/random/uuid)
+#uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
-sed -i '/#trojanws$/a\#! '"$user $exp"'\
-},{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
-sed -i '/#trojangrpc$/a\#! '"$user $exp"'\
-},{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
+sed -i '/#trojanws$/a\#### '"$user $exp"'\
+},{"password": "'""$user""'","email": "'""$user""'"' /etc/xray/config.json
+sed -i '/#trojangrpc$/a\#### '"$user $exp"'\
+},{"password": "'""$user""'","email": "'""$user""'"' /etc/xray/config.json
 
 systemctl restart xray
-trojanlink1="trojan://${uuid}@${domain}:${tr}?mode=gun&security=tls&type=grpc&serviceName=trojan-grpc&sni=bug.com#${user}"
-trojanlink="trojan://${uuid}@isi_bug_disini:${tr}?path=%2Ftrojan-ws&security=tls&host=${domain}&type=ws&sni=${domain}#${user}"
+trojanlink1="trojan://${user}@${domain}:${tr}?mode=gun&security=tls&type=grpc&serviceName=trojan-grpc&sni=shopee.co.id#Liveon-SNI ${user}"
+trojanlink="trojan://${user}@liveon.fathan.me:${tr}?path=%2Fworryfree&security=tls&host=${domain}&type=ws&sni=${domain}#Liveon-wstls ${user}"
 clear
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\E[0;41;36m           Trial TROJAN           \E[0m"
@@ -52,12 +52,12 @@ echo -e "Remarks      : ${user}"
 echo -e "Host/IP      : ${domain}"
 echo -e "port         : ${tr}"
 echo -e "Key          : ${uuid}"
-echo -e "Path         : /trojan-ws"
+echo -e "Path         : /worryfree"
 echo -e "ServiceName  : trojan-grpc"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "Link WS      : ${trojanlink}"
+echo -e "Link WS TLS  : ${trojanlink}"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "Link GRPC    : ${trojanlink1}"
+echo -e "Link GRPCSNI : ${trojanlink1}"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "Expired On   : $exp"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
