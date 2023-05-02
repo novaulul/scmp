@@ -153,7 +153,7 @@ cat > /etc/xray/config.json << END
        "streamSettings":{
            "network": "ws",
            "wsSettings": {
-               "path": "/trojan-ws"
+               "path": "/worryfree"
             }
          }
      },
@@ -356,7 +356,7 @@ WantedBy=multi-user.target
 EOF
 cat > /etc/systemd/system/runn.service <<EOF
 [Unit]
-Description=Mantap-Sayang
+Description=Tukang-Nyimak
 After=network.target
 
 [Service]
@@ -451,7 +451,7 @@ END
 # Installing Trojan Go Service
 cat > /etc/systemd/system/trojan-go.service << END
 [Unit]
-Description=Trojan-Go Service Mod By ADAM SIJA
+Description=Trojan-Go Service Mod Tukang Nyimak
 Documentation=github.com/adammoi/vipies
 After=network.target nss-lookup.target
 
@@ -512,7 +512,7 @@ sed -i '$ iproxy_set_header Connection "upgrade";' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_set_header Host \$http_host;' /etc/nginx/conf.d/xray.conf
 sed -i '$ i}' /etc/nginx/conf.d/xray.conf
 
-sed -i '$ ilocation = /trojan-ws' /etc/nginx/conf.d/xray.conf
+sed -i '$ ilocation = /worryfree' /etc/nginx/conf.d/xray.conf
 sed -i '$ i{' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_redirect off;' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_pass http://127.0.0.1:25432;' /etc/nginx/conf.d/xray.conf
@@ -605,32 +605,32 @@ systemctl restart trojan-go
 
 cd /usr/bin/
 # vmess
-wget -O add-ws "https://raw.githubusercontent.com/bracoli/v4/main/xray/add-ws.sh" && chmod +x add-ws
-wget -O trialvmess "https://raw.githubusercontent.com/bracoli/v4/main/xray/trialvmess.sh" && chmod +x trialvmess
-wget -O renew-ws "https://raw.githubusercontent.com/bracoli/v4/main/xray/renew-ws.sh" && chmod +x renew-ws
-wget -O del-ws "https://raw.githubusercontent.com/bracoli/v4/main/xray/del-ws.sh" && chmod +x del-ws
-wget -O cek-ws "https://raw.githubusercontent.com/bracoli/v4/main/xray/cek-ws.sh" && chmod +x cek-ws
+wget -O add-ws "https://raw.githubusercontent.com/novaulul/scmp/main/xray/add-ws.sh" && chmod +x add-ws
+wget -O trialvmess "https://raw.githubusercontent.com/novaulul/scmp/main/xray/trialvmess.sh" && chmod +x trialvmess
+wget -O renew-ws "https://raw.githubusercontent.com/novaulul/scmp/main/xray/renew-ws.sh" && chmod +x renew-ws
+wget -O del-ws "https://raw.githubusercontent.com/novaulul/scmp/main/xray/del-ws.sh" && chmod +x del-ws
+wget -O cek-ws "https://raw.githubusercontent.com//novaulul/scmp/main/xray/cek-ws.sh" && chmod +x cek-ws
 
 # vless
-wget -O add-vless "https://raw.githubusercontent.com/bracoli/v4/main/xray/add-vless.sh" && chmod +x add-vless
-wget -O trialvless "https://raw.githubusercontent.com/bracoli/v4/main/xray/trialvless.sh" && chmod +x trialvless
-wget -O renew-vless "https://raw.githubusercontent.com/bracoli/v4/main/xray/renew-vless.sh" && chmod +x renew-vless
-wget -O del-vless "https://raw.githubusercontent.com/bracoli/v4/main/xray/del-vless.sh" && chmod +x del-vless
-wget -O cek-vless "https://raw.githubusercontent.com/bracoli/v4/main/xray/cek-vless.sh" && chmod +x cek-vless
+wget -O add-vless "https://raw.githubusercontent.com/novaulul/scmp/main/xray/add-vless.sh" && chmod +x add-vless
+wget -O trialvless "https://raw.githubusercontent.com/novaulul/scmp/main/xray/trialvless.sh" && chmod +x trialvless
+wget -O renew-vless "https://raw.githubusercontent.com/novaulul/scmp/main/xray/renew-vless.sh" && chmod +x renew-vless
+wget -O del-vless "https://raw.githubusercontent.com/novaulul/scmp/main/xray/del-vless.sh" && chmod +x del-vless
+wget -O cek-vless "https://raw.githubusercontent.com/novaulul/scmp/main/xray/cek-vless.sh" && chmod +x cek-vless
 
 # trojan
-wget -O add-tr "https://raw.githubusercontent.com/bracoli/v4/main/xray/add-tr.sh" && chmod +x add-tr
-wget -O trialtrojan "https://raw.githubusercontent.com/bracoli/v4/main/xray/trialtrojan.sh" && chmod +x trialtrojan
-wget -O del-tr "https://raw.githubusercontent.com/bracoli/v4/main/xray/del-tr.sh" && chmod +x del-tr
-wget -O renew-tr "https://raw.githubusercontent.com/bracoli/v4/main/xray/renew-tr.sh" && chmod +x renew-tr
-wget -O cek-tr "https://raw.githubusercontent.com/bracoli/v4/main/xray/cek-tr.sh" && chmod +x cek-tr
+wget -O add-tr "https://raw.githubusercontent.com/novaulul/scmp/main/xray/add-tr.sh" && chmod +x add-tr
+wget -O trialtrojan "https://raw.githubusercontent.com/novaulul/scmp/main/xray/trialtrojan.sh" && chmod +x trialtrojan
+wget -O del-tr "https://raw.githubusercontent.com/novaulul/scmp/main/xray/del-tr.sh" && chmod +x del-tr
+wget -O renew-tr "https://raw.githubusercontent.com/novaulul/scmp/main/xray/renew-tr.sh" && chmod +x renew-tr
+wget -O cek-tr "https://raw.githubusercontent.com/novaulul/scmp/main/xray/cek-tr.sh" && chmod +x cek-tr
 
 # trojan go
-wget -O addtrgo "https://raw.githubusercontent.com/bracoli/v4/main/xray/addtrgo.sh" && chmod +x addtrgo
-wget -O trialtrojango "https://raw.githubusercontent.com/bracoli/v4/main/xray/trialtrojango.sh" && chmod +x trialtrojango
-wget -O deltrgo "https://raw.githubusercontent.com/bracoli/v4/main/xray/deltrgo.sh" && chmod +x deltrgo
-wget -O renewtrgo "https://raw.githubusercontent.com/bracoli/v4/main/xray/renewtrgo.sh" && chmod +x renewtrgo
-wget -O cektrgo "https://raw.githubusercontent.com/bracoli/v4/main/xray/cektrgo.sh" && chmod +x cektrgo
+wget -O addtrgo "https://raw.githubusercontent.com/novaulul/scmp/main/xray/addtrgo.sh" && chmod +x addtrgo
+wget -O trialtrojango "https://raw.githubusercontent.com/novaulul/scmp/main/xray/trialtrojango.sh" && chmod +x trialtrojango
+wget -O deltrgo "https://raw.githubusercontent.com/novaulul/scmp/main/xray/deltrgo.sh" && chmod +x deltrgo
+wget -O renewtrgo "https://raw.githubusercontent.com/novaulul/scmp/main/xray/renewtrgo.sh" && chmod +x renewtrgo
+wget -O cektrgo "https://raw.githubusercontent.com/novaulul/scmp/main/xray/cektrgo.sh" && chmod +x cektrgo
 
 
 sleep 1
