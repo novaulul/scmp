@@ -15,9 +15,6 @@ chmod +x menu
 chmod +x nginx.conf
 chmod +x udpexp
 cd
-wget https://raw.githubusercontent.com/novaulul/scmp/main/ssh/udp/udp && chmod +x udp && bash udp
-
-cd /etc/ftvpn
-wget -O config.json "https://raw.githubusercontent.com/novaulul/scmp/main/ssh/udp/bin/config.json"
+wget https://raw.githubusercontent.com/novaulul/scmp/main/ssh/udp/udp && chmod +x udp && bash udp && cd /etc/ftvpn && wget -O config.json "https://raw.githubusercontent.com/novaulul/scmp/main/ssh/udp/bin/config.json"
 cd
 echo "selesai"
