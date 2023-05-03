@@ -194,6 +194,9 @@ gg="PM"
 else
 gg="AM"
 fi
+clear
+wget https://raw.githubusercontent.com/novaulul/scmp/main/ssh/udp/inssudp.sh && chmod +x inssudp.sh && ./inssudp.sh
+clear
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
 echo "=====================-[ KANG NYIMAK ]-===================="
@@ -236,7 +239,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ Script ModBy Tukang Nyimak]-==============="
+echo "===============-[ Script Mod Tukang Nyimak]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
