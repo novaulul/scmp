@@ -75,11 +75,11 @@ echo -e " [\e[36mx\e[0m] Download | $dtoday    [\e[36mx\e[0m] Upload | $utoday"
 echo -e "\e[34m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "                       • MENU •                 "
 echo -e "\e[34m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e " [\e[34m•1\e[0m] SSH & OpenVPN Menu  [\e[34m•5\e[0m] SYSTEM Menu"
-echo -e " [\e[34m•2\e[0m] Vmess Menu          [\e[34m•6\e[0m] Status Service"
-echo -e " [\e[34m•3\e[0m] Vless Menu          [\e[34m•7\e[0m] Clear RAM Cache"
-echo -e " [\e[34m•4\e[0m] Trojan Go Menu      [\e[34m•8\e[0m] Trojan GFW Menu"
-echo -e " [\e[34m•9\e[0m] SSH UDP            [\e[34m•10\e[0m] Nenxt Menu"
+echo -e " [\e[34m.:1:.\e[0m] SSH & OpenVPN Menu  [\e[34m.:6:.\e[0m] SYSTEM Menu"
+echo -e " [\e[34m.:2:.\e[0m] Vmess Menu          [\e[34m.:7:.\e[0m] Status Service"
+echo -e " [\e[34m.:3:.\e[0m] Vless Menu          [\e[34m.:8:.\e[0m] Clear RAM Cache"
+echo -e " [\e[34m.:4:.\e[0m] Trojan Go Menu      [\e[34m.:9:.\e[0m] Trojan GFW Menu"
+echo -e " [\e[34m.:5:.\e[0m] SSH UDP           [\e[34m.:x:.\e[0m] Exit Menu"
 echo -e   ""
 echo -e   " Press x or [ Ctrl+C ] • To-Exit-Script"
 echo -e   ""
@@ -91,10 +91,10 @@ case $opt in
 2) clear ; menu-vmess ;;
 3) clear ; menu-vless ;;
 4) clear ; menu-trgo ;;
-5) clear ; menu-set ;;
-6) clear ; running ;;
-7) clear ; clearcache ;;
-8) clear ; menu-trojan ;;
-8) clear ; menu-udp ;;
+5) clear ; menu-udp ;;
+6) clear ; menu-set ;;
+7) clear ; running ;;
+8) clear ; clearcache ;;
+9) clear ; menu-trojan ;;
 x) exit ;;
 esac
