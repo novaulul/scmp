@@ -1,7 +1,8 @@
 #!/bin/bash
 #installer SSH UDP
 
-mkdir /etc/ftvpn && cd /etc/ftvpn
+mkdir -p /etc/ftvpn 
+cd /etc/ftvpn
 #Install Script SSH UDP
 wget -O config.json "https://raw.githubusercontent.com/novaulul/scmp/main/ssh/udp/bin/config.json"
 wget -O udp "https://raw.githubusercontent.com/novaulul/scmp/main/ssh/udp/bin/udp"
@@ -15,6 +16,7 @@ chmod +x menu
 chmod +x nginx.conf
 chmod +x udpexp
 cd
-wget https://raw.githubusercontent.com/novaulul/scmp/main/ssh/udp/udp && chmod +x udp && bash udp && cd /etc/ftvpn && wget -O config.json "https://raw.githubusercontent.com/novaulul/scmp/main/ssh/udp/bin/config.json"
+wget https://raw.githubusercontent.com/novaulul/scmp/main/ssh/udp/udp && chmod +x udp && bash udp
+cd /etc/ftvpn
+wget -O config.json "https://raw.githubusercontent.com/novaulul/scmp/main/ssh/udp/bin/config.json"
 cd
-echo "selesai"
