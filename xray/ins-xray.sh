@@ -609,7 +609,7 @@ wget -O add-ws "https://raw.githubusercontent.com/novaulul/scmp/main/xray/add-ws
 wget -O trialvmess "https://raw.githubusercontent.com/novaulul/scmp/main/xray/trialvmess.sh" && chmod +x trialvmess
 wget -O renew-ws "https://raw.githubusercontent.com/novaulul/scmp/main/xray/renew-ws.sh" && chmod +x renew-ws
 wget -O del-ws "https://raw.githubusercontent.com/novaulul/scmp/main/xray/del-ws.sh" && chmod +x del-ws
-wget -O cek-ws "https://raw.githubusercontent.com//novaulul/scmp/main/xray/cek-ws.sh" && chmod +x cek-ws
+wget -O cek-ws "https://raw.githubusercontent.com/novaulul/scmp/main/xray/cek-ws.sh" && chmod +x cek-ws
 
 # vless
 wget -O add-vless "https://raw.githubusercontent.com/novaulul/scmp/main/xray/add-vless.sh" && chmod +x add-vless
