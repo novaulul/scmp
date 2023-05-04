@@ -355,7 +355,15 @@ chmod +x acs-set
 chmod +x sshws
 cd
 
+# Custom Banner SSH
+echo "================  Banner ======================"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/novaulul/scmp/main/ssh/issue.net"
+chmod +x /etc/issue.net
 
+echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
+echo "DROPBEAR_BANNER="/etc/issue.net"" >> /etc/default/dropbear
+
+cd
 cat > /etc/cron.d/re_otm <<-END
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
