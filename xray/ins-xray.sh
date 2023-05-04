@@ -623,10 +623,10 @@ wget -O add-tr "https://raw.githubusercontent.com/novaulul/scmp/main/xray/add-tr
 wget -O trialtrojan "https://raw.githubusercontent.com/novaulul/scmp/main/xray/trialtrojan.sh" && chmod +x trialtrojan
 wget -O del-tr "https://raw.githubusercontent.com/novaulul/scmp/main/xray/del-tr.sh" && chmod +x del-tr
 wget -O renew-tr "https://raw.githubusercontent.com/novaulul/scmp/main/xray/renew-tr.sh" && chmod +x renew-tr
-wget -O cek-tr "https://raw.githubusercontent.com/novaulul/scmp/main/xray/cek-tr.sh" && chmod +x cek-tr
-wget -O add-trpanel "https://raw.githubusercontent.com/novaulul/scmp/main/xray/add-trpanel.sh" && chmod +x add-trpanel
-wget -O renew-trpanel "https://raw.githubusercontent.com/novaulul/scmp/main/xray/renew-trpanel.sh" && chmod +x renew-trpanel
-wget -O del-trpanel "https://raw.githubusercontent.com/novaulul/scmp/main/xray/del-trpanel.sh" && chmod +x del-trpanel
+wget -O cek-tr "https://raw.githubusercontent.com/novaulul/scmp/main/xray/cek-tr" && chmod +x cek-tr
+wget -O add-trpanel "https://raw.githubusercontent.com/novaulul/scmp/main/xray/add-trpanel" && chmod +x add-trpanel
+wget -O renew-trpanel "https://raw.githubusercontent.com/novaulul/scmp/main/xray/renew-trpanel" && chmod +x renew-trpanel
+wget -O del-trpanel "https://raw.githubusercontent.com/novaulul/scmp/main/xray/del-trpanel" && chmod +x del-trpanel
 
 # trojan go
 wget -O addtrgo "https://raw.githubusercontent.com/novaulul/scmp/main/xray/addtrgo.sh" && chmod +x addtrgo
