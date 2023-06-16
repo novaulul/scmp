@@ -635,11 +635,14 @@ wget -O deltrgo "https://raw.githubusercontent.com/novaulul/scmp/main/xray/deltr
 wget -O renewtrgo "https://raw.githubusercontent.com/novaulul/scmp/main/xray/renewtrgo.sh" && chmod +x renewtrgo
 wget -O cektrgo "https://raw.githubusercontent.com/novaulul/scmp/main/xray/cektrgo.sh" && chmod +x cektrgo
 
-
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 yellow "xray/Vmess"
 yellow "xray/Vless"
+
+cd /root/
+# tambahan spedtest
+wget -O speedtest.py "https://raw.githubusercontent.com/novaulul/scmp/main/xray/speedtest.py" && chmod +x speedtest.py
 
 mv /root/domain /etc/xray/ 
 if [ -f /root/scdomain ];then
