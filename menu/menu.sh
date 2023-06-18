@@ -2,7 +2,7 @@
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo "Checking VPS"
 #########################
-
+INSUDP="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
 # Color Validation
 DF='\e[39m'
 Bold='\e[1m'
@@ -79,7 +79,7 @@ echo -e " [\e[34m.:\033[0m1\e[34m:.\033[0m] SSH & OpenVPN Menu  [\e[34m.:\033[0m
 echo -e " [\e[34m.:\033[0m2\e[34m:.\033[0m] Vmess Menu          [\e[34m.:\033[0m7\e[34m:.\033[0m] Status Service"
 echo -e " [\e[34m.:\033[0m3\e[34m:.\033[0m] Vless Menu          [\e[34m.:\033[0m8\e[34m:.\033[0m] Clear RAM Cache"
 echo -e " [\e[34m.:\033[0m4\e[34m:.\033[0m] Trojan Go Menu      [\e[34m.:\033[0m9\e[34m:.\033[0m] Trojan GFW Menu"
-echo -e " [\e[34m.:\033[0m5\e[34m:.\033[0m] SSH UDP             [\e[34m.:\033[0mx\e[34m:.\033[0m] Exit Menu"
+echo -e " [\e[34m.:\033[0m5\e[34m:.\033[0m] Install UDP         [\e[34m.:\033[0mx\e[34m:.\033[0m] Exit Menu"
 echo -e   ""
 echo -e   " Press x or [ Ctrl+C ] • To-Exit-Script"
 echo -e   ""
@@ -91,7 +91,7 @@ case $opt in
 2) clear ; menu-vmess ;;
 3) clear ; menu-vless ;;
 4) clear ; menu-trgo ;;
-5) clear ; menu-udp ;;
+5) clear ; wget --load-cookies /tmp/cookies.txt ${INSUDP} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
 6) clear ; menu-set ;;
 7) clear ; running ;;
 8) clear ; clearcache ;;
