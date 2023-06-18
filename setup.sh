@@ -195,7 +195,7 @@ else
 gg="AM"
 fi
 clear
-wget https://raw.githubusercontent.com/novaulul/scmp/main/ssh/udp/inssudp.sh && chmod +x inssudp.sh && ./inssudp.sh
+#wget https://raw.githubusercontent.com/novaulul/scmp/main/ssh/udp/inssudp.sh && chmod +x inssudp.sh && ./inssudp.sh
 clear
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
