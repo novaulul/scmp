@@ -79,7 +79,7 @@ echo -e " [\e[34m.:\033[0m1\e[34m:.\033[0m] SSH & OpenVPN Menu  [\e[34m.:\033[0m
 echo -e " [\e[34m.:\033[0m2\e[34m:.\033[0m] Vmess Menu          [\e[34m.:\033[0m7\e[34m:.\033[0m] Status Service"
 echo -e " [\e[34m.:\033[0m3\e[34m:.\033[0m] Vless Menu          [\e[34m.:\033[0m8\e[34m:.\033[0m] Clear RAM Cache"
 echo -e " [\e[34m.:\033[0m4\e[34m:.\033[0m] Trojan Go Menu      [\e[34m.:\033[0m9\e[34m:.\033[0m] Trojan GFW Menu"
-echo -e " [\e[34m.:\033[0m5\e[34m:.\033[0m] Install UDP         [\e[34m.:\033[0mx\e[34m:.\033[0m] Exit Menu"
+echo -e " [\e[34m.:\033[0m5\e[34m:.\033[0m] Install UDP         [\e[34m.:\033[0m0\e[34m:.\033[0m] Clear log"
 echo -e   ""
 echo -e   " Press x or [ Ctrl+C ] • To-Exit-Script"
 echo -e   ""
@@ -96,5 +96,6 @@ case $opt in
 7) clear ; running ;;
 8) clear ; clearcache ;;
 9) clear ; menu-trojan ;;
+0) clear ; clearlog ;;
 x) exit ;;
 esac
