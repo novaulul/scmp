@@ -628,6 +628,8 @@ wget -O add-trpanel "https://raw.githubusercontent.com/novaulul/scmp/main/xray/a
 wget -O renew-trpanel "https://raw.githubusercontent.com/novaulul/scmp/main/xray/renew-trpanel" && chmod +x renew-trpanel
 wget -O del-trpanel "https://raw.githubusercontent.com/novaulul/scmp/main/xray/del-trpanel" && chmod +x del-trpanel
 wget -O clearlog "https://raw.githubusercontent.com/novaulul/scmp/main/xray/clearlog" && chmod +x clearlog
+wget -O add-trbot "https://raw.githubusercontent.com/novaulul/scmp/main/xray/add-trbot" && chmod +x add-trbot
+wget -O del-trbot "https://raw.githubusercontent.com/novaulul/scmp/main/xray/del-trbot" && chmod +x del-trbot
 
 # trojan go
 wget -O addtrgo "https://raw.githubusercontent.com/novaulul/scmp/main/xray/addtrgo.sh" && chmod +x addtrgo
